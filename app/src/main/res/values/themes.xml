@@ -10,7 +10,8 @@
         <item name="android:paddingEnd">10dp</item>
         <item name="android:layout_height">35dp</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
         <item name="android:background">@drawable/selector_menu</item>
         <item name="android:backgroundTint">@color/menu_bg_selector</item>
         <item name="android:drawablePadding">10dp</item>

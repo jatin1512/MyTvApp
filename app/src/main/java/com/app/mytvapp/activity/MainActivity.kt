@@ -58,17 +58,17 @@ class MainActivity : FragmentActivity() ,View.OnKeyListener{
 
     }
 
-    fun openSideMenu() {
+    private fun openSideMenu() {
         val animSlide : Animation = AnimationUtils.loadAnimation(this, R.anim.slide_in_left)
         mBinding.blfNavBar.startAnimation(animSlide)
 
         mBinding.blfNavBar.requestLayout()
-       // mBinding.blfNavBar.layoutParams.width = AppUtils.getWidthInPercent(this, 16)
+        mBinding.blfNavBar.layoutParams.width = AppUtils.getWidthInPercent(this, 16)
     }
 
     private fun closeSideMenu() {
         mBinding.blfNavBar.requestLayout()
-      //  mBinding.blfNavBar.layoutParams.width = AppUtils.getWidthInPercent(this, 5)
+        mBinding.blfNavBar.layoutParams.width = AppUtils.getWidthInPercent(this, 5)
 
         mBinding.container.requestFocus()
         sideMenu = false
@@ -115,7 +115,7 @@ class MainActivity : FragmentActivity() ,View.OnKeyListener{
                 if (!sideMenu) {
                     switchToLastSelectedMenu()
 
-                    //openSideMenu()
+                    openSideMenu()
                     sideMenu = true
                 }
             }
@@ -126,7 +126,7 @@ class MainActivity : FragmentActivity() ,View.OnKeyListener{
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT && sideMenu) {
             sideMenu = false
-            //closeSideMenu()
+            closeSideMenu()
         }
 
         return super.onKeyDown(keyCode, event)
@@ -135,7 +135,7 @@ class MainActivity : FragmentActivity() ,View.OnKeyListener{
     override fun onBackPressed() {
         if (sideMenu) {
             sideMenu = false
-            //closeSideMenu()
+            closeSideMenu()
         } else {
             super.onBackPressed()
         }
@@ -164,6 +164,4 @@ class MainActivity : FragmentActivity() ,View.OnKeyListener{
             }
         }
     }
-
-
 }

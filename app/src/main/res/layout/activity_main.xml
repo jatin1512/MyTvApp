@@ -16,16 +16,16 @@
 
     <androidx.leanback.widget.BrowseFrameLayout
         android:id="@+id/blfNavBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
         android:background="#000000"
         android:nextFocusLeft="@id/container">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/btnHome"
