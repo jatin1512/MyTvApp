@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="Theme.MyTvApp" parent="@style/Theme.Leanback" />
+
+    <style name="menuStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:background">@drawable/selector_menu</item>
+        <item name="android:backgroundTint">@color/menu_bg_selector</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textColor">@color/menu_text_selector</item>
+    </style>
+</resources>

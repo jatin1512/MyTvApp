@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyTvApp</string>
+    <string name="home">Home</string>
+    <string name="movies">Movies</string>
+    <string name="sports">Sports</string>
+    <string name="kids">Kids</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+</resources>

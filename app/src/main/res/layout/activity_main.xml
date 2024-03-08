@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        tools:context=".activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nextFocusRight="@id/blfNavBar" />
+
+    <androidx.leanback.widget.BrowseFrameLayout
+        android:id="@+id/blfNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:nextFocusLeft="@id/container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/btnHome"
+                style="@style/menuStyle"
+                android:focusable="true"
+                android:drawableLeft="@drawable/ic_home"
+                android:text="@string/home"
+                android:textColor="@color/menu_text_selector" />
+
+            <TextView
+                android:id="@+id/btnMovies"
+                style="@style/menuStyle"
+                android:drawableLeft="@drawable/ic_movie"
+                android:focusable="true"
+                android:text="@string/movies"
+                android:textColor="@color/menu_text_selector" />
+
+
+            <TextView
+                android:id="@+id/btnSports"
+                style="@style/menuStyle"
+                android:focusable="true"
+                android:text="@string/sports"
+                android:drawableLeft="@drawable/ic_sports"
+                android:textColor="@color/menu_text_selector" />
+
+            <TextView
+                android:id="@+id/btnKids"
+                android:focusable="true"
+                style="@style/menuStyle"
+                android:text="@string/kids"
+                android:drawableLeft="@drawable/ic_genre"
+                android:textColor="@color/menu_text_selector" />
+
+            <TextView
+                android:id="@+id/btnSearch"
+                style="@style/menuStyle"
+                android:focusable="true"
+                android:text="@string/search"
+                android:drawableLeft="@drawable/ic_search"
+                android:textColor="@color/menu_text_selector" />
+
+            <TextView
+                android:id="@+id/btnSettings"
+                style="@style/menuStyle"
+                android:focusable="true"
+                android:text="@string/settings"
+                android:drawableLeft="@drawable/ic_settings"
+                android:textColor="@color/menu_text_selector" />
+
+        </LinearLayout>
+
+
+    </androidx.leanback.widget.BrowseFrameLayout>
+
+</merge>
+</layout>
