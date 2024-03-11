@@ -60,15 +60,15 @@ class MainActivity : FragmentActivity() ,View.OnKeyListener{
 
     private fun openSideMenu() {
         val animSlide : Animation = AnimationUtils.loadAnimation(this, R.anim.slide_in_left)
-        mBinding.blfNavBar.startAnimation(animSlide)
+       // mBinding.blfNavBar.startAnimation(animSlide)
 
         mBinding.blfNavBar.requestLayout()
-        mBinding.blfNavBar.layoutParams.width = AppUtils.getWidthInPercent(this, 16)
+       // mBinding.blfNavBar.layoutParams.width = AppUtils.getWidthInPercent(this, 16)
     }
 
     private fun closeSideMenu() {
         mBinding.blfNavBar.requestLayout()
-        mBinding.blfNavBar.layoutParams.width = AppUtils.getWidthInPercent(this, 5)
+       // mBinding.blfNavBar.layoutParams.width = AppUtils.getWidthInPercent(this, 5)
 
         mBinding.container.requestFocus()
         sideMenu = false
@@ -111,7 +111,7 @@ class MainActivity : FragmentActivity() ,View.OnKeyListener{
 
             }
 
-            KeyEvent.KEYCODE_DPAD_LEFT -> {
+            KeyEvent.KEYCODE_DPAD_UP -> {
                 if (!sideMenu) {
                     switchToLastSelectedMenu()
 
@@ -124,7 +124,8 @@ class MainActivity : FragmentActivity() ,View.OnKeyListener{
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT && sideMenu) {
+
+        if (keyCode == KeyEvent.KEYCODE_DPAD_UP && sideMenu) {
             sideMenu = false
             closeSideMenu()
         }
